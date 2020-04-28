@@ -1,0 +1,20 @@
+<div class="loading-screen-wrapper" *ngIf="this.loading==true">
+  <div class="loader-general">
+    <div *ngIf="this.statusTextVisible!==true" class="imgCentrado">
+      <img class="imgloading" src="../../../assets/images/loading.gif">
+    </div>
+    <div class="loader-chart" *ngIf="this.statusTextVisible==true">
+      <div class="textWait">
+        <div class="box-loading">
+          <img class="img-icon imgloading" src="../../../assets/images/loading.gif">
+          <div class="text-box">
+            {{this.text}}
+          </div>
+        </div>
+        <div class="close-button-box" *ngIf="this.btm==true">
+          <div class="close-button" (click)="this.close();">Cancelar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
