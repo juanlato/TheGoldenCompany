@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatInputModule} from '@angular/material/input';
@@ -19,9 +18,13 @@ import { LoadingScreenMinComponent } from './components/loading-screen-min/loadi
 import { AlertasComponent } from './alertas/alertas.component';
 
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { Service } from './services';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
+  { path: 'registro', component: LoginComponent },
+  { path: 'registro', component: LoginComponent },
 ];
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ const routes: Routes = [
     LoadingScreenComponent,
     LoadingScreenMinComponent,
     AlertasComponent,
-    LoginComponent    
+    LoginComponent,
+    HeaderComponent    
   ],
   imports: [
     BrowserModule,
@@ -42,15 +46,10 @@ const routes: Routes = [
     MatTooltipModule,
     MatInputModule,
     MatDialogModule,
-    RouterModule.forRoot([
-      {
-         path: '', component: LoginComponent 
-      },
-    ]),
-    BrowserAnimationsModule,
-  ],
+    RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [Service,LoadingScreenComponent],
+  bootstrap: [AppComponent],
+  entryComponents:[AlertasComponent]
 })
 export class AppModule { }

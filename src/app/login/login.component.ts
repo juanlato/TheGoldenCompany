@@ -10,7 +10,12 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-     
+    console.log("puto el que lo lea");
+    alert("puto el que lo lea")
+  }
+  open(value){
+    console.log("puto el que lo lea"+value);
+    alert("puto el que lo lea"+value)
   }
 
 }
