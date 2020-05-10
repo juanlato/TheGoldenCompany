@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatInputModule} from '@angular/material/input';
@@ -16,14 +15,19 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 
 
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
+  { path: 'registro', component: LoginComponent },
+  { path: 'registro', component: LoginComponent },
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent    
+    LoginComponent,
+    HeaderComponent    
   ],
   imports: [
     BrowserModule,
@@ -36,15 +40,8 @@ const routes: Routes = [
     MatTooltipModule,
     MatInputModule,
     MatDialogModule,
-    RouterModule.forRoot([
-      {
-         path: '', component: LoginComponent 
-      },
-    ]),
-    BrowserAnimationsModule,
-  ],
+    RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
