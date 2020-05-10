@@ -12,12 +12,7 @@ export class LoginComponent implements OnInit {
   constructor(private route:Router) { }
 
   ngOnInit(): void {
-    console.log("puto el que lo lea");
-  }
-  open(value){
-    console.log("puto el que lo lea"+value);
-    alert("puto el que lo lea"+value);
-    //this.route.navigate(["header"]);
+
   }
 
 }
