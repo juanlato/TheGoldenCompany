@@ -1,6 +1,9 @@
 .generalBox
     height: auto
+    float: left
+    width: 100%
 .containerBox
+    margin-top: 100px
     margin-left: auto
     margin-right: auto
     max-width: 700px
@@ -8,16 +11,50 @@
 .titleName
      width: 100%
      text-align: center
+     font-size: 40px
+     height: 45px
+     font-style: italic
+     font-family: monospace
 .inputLogin
      width: 100%
 .inputlog
-     width: 100%
+     width: 98%
      height: 30px
      border: 1px solid #000000
      border-radius: 20px
-     margin-top: 5px
+     margin-top: 10px
      background-color: #f7f3f3
+     padding-left: 2%
 .buttons
      width: 100%
-
-
+     margin-top: 20px
+     display: grid
+     grid-template-columns: 50% 50%
+     grid-row-gap: 20px
+.buttonRegister
+     margin-right: 5px
+     height: 30px
+     text-align: center
+     border-radius: 20px
+     background-color: #f5ab65
+     padding-top: 10px
+     font-family: monospace
+     color: #ffffff
+.buttonlogin
+     margin-left: 5px
+     height: 30px
+     text-align: center
+     border-radius: 20px
+     padding-top: 10px
+     background-color: #f5ab65
+     font-family: monospace
+     color: #ffffff
+@media only screen and (max-width: 720px)
+     .buttons
+          grid-template-columns: 100%
+     .buttonlogin
+          margin-left: 0px
+          grid-row: 1
+     .buttonRegister
+          margin-right: 0px
+          grid-row: 2

@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
@@ -33,7 +36,7 @@ const routes: Routes = [
     HeaderComponent,
     RegistroComponent,
     VendedorComponent ,   
-    FooterComponent    
+    FooterComponent,    
   ],
   imports: [
     BrowserModule,
@@ -46,8 +49,11 @@ const routes: Routes = [
     MatTooltipModule,
     MatInputModule,
     MatDialogModule,
+    CommonModule,
+    FormsModule,
     RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
