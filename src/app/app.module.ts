@@ -18,11 +18,13 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistroComponent } from './registro/registro.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
+  { path: 'prueba', component: VendedorComponent },
 ];
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ const routes: Routes = [
     LoginComponent,
     HeaderComponent,
     RegistroComponent,
-    VendedorComponent    
+    VendedorComponent ,   
+    FooterComponent    
   ],
   imports: [
     BrowserModule,
