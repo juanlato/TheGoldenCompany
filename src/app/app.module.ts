@@ -16,18 +16,19 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'registro', component: LoginComponent },
-  { path: 'registro', component: LoginComponent },
+  { path: 'registro', component: RegistroComponent },
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HeaderComponent    
+    HeaderComponent,
+    RegistroComponent    
   ],
   imports: [
     BrowserModule,
