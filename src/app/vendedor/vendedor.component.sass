@@ -2,21 +2,32 @@
     position: relative
     text-align: center
     font-size: 40px
+    width: auto
+    height: 150px
     top: 40px
-.grid-container 
-    margin: 10px
+
+.item1
+    grid-area: sp1
+    background-color: #bddeff
+    width: 450px
+    height: auto
+.item2
+    grid-area: sp2
+    background-color: #789123
+.item3
+    grid-area: sp3
+    background-color: #456789
+.item4
+    grid-area: sp4
+    background-color: #ABCDEF
+.grida
     display: grid
-    grid-template-columns: auto auto
-    grid-template-rows: 100px
-    grid-gap: 30px
-    background-color: #2196F3
-    padding: 10px
-    position: absolute
-    top: 200px
-    left: 80px
-    right: 80px
-    
-.grid-item
-    text-align: center
-    font-size: 30px
-    padding: 30px
+    grid-template-areas: 'sp1 sp1 sp1 sp2 sp2' 'sp1 sp1 sp1 sp2 sp2' 'sp1 sp1 sp1 sp3 sp3' 'sp1 sp1 sp1 sp4 sp4' ;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    height: auto
+.logo
+    margin-top: none
+    width: 150px
+    height: auto
