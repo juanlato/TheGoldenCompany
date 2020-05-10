@@ -17,6 +17,7 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistroComponent } from './registro/registro.component';
+import { VendedorComponent } from './vendedor/vendedor.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    RegistroComponent    
+    RegistroComponent,
+    VendedorComponent    
   ],
   imports: [
     BrowserModule,
