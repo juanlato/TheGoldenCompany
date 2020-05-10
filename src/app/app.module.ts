@@ -14,9 +14,6 @@ import { MatTooltipModule} from '@angular/material/tooltip';
 import { MatButtonModule} from '@angular/material/button';
 import { MatFormFieldModule} from '@angular/material/form-field';
 
-import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
-import { LoadingScreenMinComponent } from './components/loading-screen-min/loading-screen-min.component';
-import { AlertasComponent } from './alertas/alertas.component';
 
 import { LoginComponent } from './login/login.component';
 
@@ -26,9 +23,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoadingScreenComponent,
-    LoadingScreenMinComponent,
-    AlertasComponent,
     LoginComponent    
   ],
   imports: [
