@@ -22,12 +22,16 @@ import { HeaderComponent } from './header/header.component';
 import { RegistroComponent } from './registro/registro.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarriersHomeComponent } from './carriers-home/carriers-home.component';
+import { CustomersHomeComponent } from './customers-home/customers-home.component';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'vendedor', component: VendedorComponent },
+  { path: 'carrier', component: CarriersHomeComponent },
+  { path: 'customer', component: CustomersHomeComponent },
 ];
 @NgModule({
   declarations: [
@@ -36,7 +40,7 @@ const routes: Routes = [
     HeaderComponent,
     RegistroComponent,
     VendedorComponent ,   
-    FooterComponent,    
+    FooterComponent, CarriersHomeComponent, CustomersHomeComponent,    
   ],
   imports: [
     BrowserModule,

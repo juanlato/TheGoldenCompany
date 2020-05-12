@@ -1,3 +1,35 @@
 <app-header></app-header>
-<p>registro works!</p>
+<div class="generalBox">
+    <div class="containerBox">
+        <div class="titleName">
+            Registrarse
+        </div>
+        <div class="inputLogin">
+            <div class="titleNameReg"><b>Nombres</b></div> <input placeholder="Ej. Juan David" class="inputlog" type="text">
+        </div>
+        <div class="inputLogin">
+            <div class="titleNameReg"><b>Apellidos</b></div> <input placeholder="Ej.Ayala lizarazo" class="inputlog" type="text">
+        </div>
+        <div class="inputLogin">
+            <div class="titleNameReg"><b>Cumpleaños</b></div><input placeholder="MM/DD/YYYY" class="inputlog" type="text">
+        </div>
+        <div class="inputLogin">
+            <div class="titleNameReg"><b># Documento</b></div><input placeholder="1234567890" class="inputlog" type="text">
+        </div>
+        <div class="inputLogin">
+            <div class="titleNameReg"><b>Email</b></div><input placeholder="TheGoldenCompany@gmail.com" class="inputlog" type="text">
+        </div>
+        <div class="inputLogin">
+            <div class="titleNameReg"><b>Contraseña</b></div><input placeholder="........." class="inputlog" type="password">
+        </div>
+        <div class="buttons">
+            <div class="buttonRegister" (click)="this.backToPage()">
+                <b>Volver</b>
+            </div>
+            <div class="buttonlogin" (click)="this.registerUser()">
+                <b>Registrarse</b>
+            </div>
+        </div>
+    </div>
+</div>
 <app-footer></app-footer>
