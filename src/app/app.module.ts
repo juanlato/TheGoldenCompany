@@ -24,6 +24,7 @@ import { VendedorComponent } from './vendedor/vendedor.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarriersHomeComponent } from './carriers-home/carriers-home.component';
 import { CustomersHomeComponent } from './customers-home/customers-home.component';
+import { FindOrdersCarrierComponent } from './find-orders-carrier/find-orders-carrier.component';
 
 
 
@@ -33,6 +34,8 @@ const routes: Routes = [
   { path: 'vendedor', component: VendedorComponent },
   { path: 'carrier', component: CarriersHomeComponent },
   { path: 'customer', component: CustomersHomeComponent },
+  { path: 'ordersCarrier', component: FindOrdersCarrierComponent },
+  
 ];
 @NgModule({
   declarations: [
@@ -41,7 +44,7 @@ const routes: Routes = [
     HeaderComponent,
     RegistroComponent,
     VendedorComponent ,   
-    FooterComponent, CarriersHomeComponent, CustomersHomeComponent,    
+    FooterComponent, CarriersHomeComponent, CustomersHomeComponent, FindOrdersCarrierComponent,    
   ],
   imports: [
     BrowserModule,
