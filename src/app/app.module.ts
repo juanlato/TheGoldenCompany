@@ -15,7 +15,7 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { MatTooltipModule} from '@angular/material/tooltip';
 import { MatButtonModule} from '@angular/material/button';
 import { MatFormFieldModule} from '@angular/material/form-field';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,6 +24,7 @@ import { VendedorComponent } from './vendedor/vendedor.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarriersHomeComponent } from './carriers-home/carriers-home.component';
 import { CustomersHomeComponent } from './customers-home/customers-home.component';
+
 
 
 const routes: Routes = [
@@ -55,7 +56,9 @@ const routes: Routes = [
     MatDialogModule,
     CommonModule,
     FormsModule,
-    RouterModule.forRoot(routes)],
+    NgbModule,
+    RouterModule.forRoot(routes),
+    ],
   exports: [RouterModule
   ],
   bootstrap: [AppComponent],

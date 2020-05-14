@@ -1,3 +1,87 @@
 <app-header></app-header>
-<p>customers-home works!</p>
+<div class="generalBox">
+    <div class="containerBox">
+        <div class="userInfo">
+           <div class="nameClient"><b>(Nombre del cliente)</b> </div> 
+           <div class="imageClient"><img class="userImage" src="./../../assets/img/vendedor.png" alt=""></div>
+           <div class="personalData">
+               
+           </div>
+        </div>
+        <div>
+            <input type="text" class="inputfinder" placeholder="Buscar">
+            <div class="ofertasTitle">
+               <b>Ofertas exclusivas</b> 
+            </div>
+            <div class="carrusel">
+                <ngb-carousel [interval]="10000" [pauseOnHover]="true" [showNavigationIndicators]="false">
+                    <ng-template ngbSlide *ngFor="let img of images; index as i">
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                    </ng-template>
+                  </ngb-carousel>
+            </div> 
+            <div class="ofertasTitle">
+               <b>Ofertas del dia</b> 
+            </div>
+            <div class="carrusel">
+                <ngb-carousel [interval]="10000" [pauseOnHover]="true">
+                    <ng-template ngbSlide *ngFor="let img of images; index as i">
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                        <div>
+                            <img class="imgw" [src]="img" alt="My image {{i + 1}} description">
+                        </div>
+                    </ng-template>
+                  </ngb-carousel>
+            </div>   
+        </div>   
+        <div class="myOrders">
+            <div class="titleMyOrders">
+                <b>Mis pedidos</b> 
+             </div>
+             <div class="tableOrders">
+                <div class="tableTitles">
+                    <div >Orden</div>
+                    <div class="resposiveMin">Descripción</div>
+                    <div class="resposiveMin">Precio</div>
+                    <div class="resposiveMin">Estado</div>
+                 </div>
+                 <div class="tableItemsW">
+                    <div><b class="resposiveMinTitle">Orden:</b> 102</div>
+                    <div><b class="resposiveMinTitle">Descripción:</b>Aguacates 20 kg , Arroz 2000kg , leche 120 lt</div>
+                    <div><b class="resposiveMinTitle">Precio:</b>500000</div>
+                    <div><b class="resposiveMinTitle">Estado:</b>En camino</div>
+                 </div> 
+                 <div class="tableItemsG">
+                    <div><b class="resposiveMinTitle">Orden:</b> 108</div>
+                    <div><b class="resposiveMinTitle">Descripción:</b>Aguacates 10 kg , Arroz 5000kg , leche 20 lt</div>
+                    <div><b class="resposiveMinTitle">Precio:</b>400000</div>
+                    <div><b class="resposiveMinTitle">Estado:</b>Entregado</div>
+                 </div> 
+             </div>                           
+        </div>       
+    </div>
+</div>
+    
+
+    
+
 <app-footer></app-footer>
