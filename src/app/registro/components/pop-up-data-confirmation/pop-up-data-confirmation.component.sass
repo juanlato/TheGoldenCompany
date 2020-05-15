@@ -1,0 +1,55 @@
+.generalBox
+.titlePopUp
+    height: 30px
+    border-radius: 20px
+    background-color: #f5ab65
+    font-family: monospace
+    padding-top: 5px
+    color: #ffffff
+    text-align: center
+    margin-bottom: 10px
+.gridContainer
+    display: grid
+    padding: 20px
+    grid-template-columns: 50% 50%
+    grid-row-gap: 10px
+    background-color: #dddddd
+.option
+    text-align: left
+.optionData
+    text-align: right
+.buttons
+     width: 100%
+     margin-top: 20px
+     display: grid
+     grid-template-columns: 50% 50%
+     grid-row-gap: 20px
+.buttonRegister
+     margin-right: 5px
+     height: 30px
+     text-align: center
+     border-radius: 20px
+     background-color: #f5ab65
+     padding-top: 5px
+     font-family: monospace
+     color: #ffffff
+     cursor: pointer
+.buttonlogin
+     margin-left: 5px
+     height: 30px
+     text-align: center
+     border-radius: 20px
+     padding-top: 5px
+     background-color: #f5ab65
+     font-family: monospace
+     color: #ffffff
+     cursor: pointer
+@media only screen and (max-width: 720px)
+        .buttons
+            grid-template-columns: 100%
+        .buttonlogin
+            margin-left: 0px
+            grid-row: 1
+        .buttonRegister
+            margin-right: 0px
+            grid-row: 2
