@@ -13,7 +13,7 @@ interface login {
   providedIn: 'root'
 })
 export class ServicesService {
-  private urlService: string = "https://localhost:44354/api";
+  private urlService: string = "/api";
   constructor(private http: HttpClient, private router: Router) { }
   login(Username, Password) {
     var form = new FormData();
