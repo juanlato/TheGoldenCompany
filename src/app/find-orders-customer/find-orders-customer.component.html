@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="generalBox">
+    <div class="containerBox">
+        <div class="findOptions">
+            <input type="text" class="inputfinder" placeholder="Buscar" (change)="this.findOrdes()" [(ngModel)]="this.valueFinder">
+            <mat-form-field>
+                <mat-label>Filtro</mat-label>
+                <mat-select [(ngModel)]="this.valueFiltro" (selectionChange)="this.findOrdes()">
+                    <mat-option *ngFor="let filter of this.filtros" [value]="filter.value">
+                        {{filter.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="myOrders">
+            <div class="titleMyOrders">
+                <b>Mis pedidos</b> 
+             </div>
+             <div class="tableOrders">
+                <div class="tableTitles">
+                    <div >Item</div>
+                    <div class="resposiveMin">Descripción</div>
+                    <div class="resposiveMin">Precio</div>
+                    <div class="resposiveMin">fecha</div>
+                 </div>
+                 <div class="tableItemsW">
+                    <div class="imageData"><img class="productIMG" src="./../../assets/img/imagen-no-disponible-png-4.png" alt=""></div>
+                    <div><b class="resposiveMinTitle">Descripción:</b>Aguacates 20 kg </div>
+                    <div><b class="resposiveMinTitle">Precio:</b>500000</div>
+                    <div><b class="resposiveMinTitle">Fecha:</b>05/15/2020</div>
+                 </div> 
+                 <div class="tableItemsG">
+                    <div class="imageData"><img class="productIMG" src="./../../assets/img/imagen-no-disponible-png-4.png" alt=""></div>
+                    <div><b class="resposiveMinTitle">Descripción:</b> Arroz 5 Costales </div>
+                    <div><b class="resposiveMinTitle">Precio:</b>400000</div>
+                    <div><b class="resposiveMinTitle">Fecha:</b>05/02/2020</div>
+                 </div> 
+             </div>                           
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
