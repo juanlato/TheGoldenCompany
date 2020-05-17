@@ -23,7 +23,19 @@ export class LoginComponent implements OnInit {
   login(){
     console.log(this.userName+" "+this.password)
     this.service.login(this.userName,this.password).subscribe(data=>{
-      console.log(data);
+      if(data.hasError==false){
+        sessionStorage.setItem("login",JSON.stringify(data));
+        if(data.result[0].type_User==1)
+        {
+          this.route.navigate(["vendedor"]);
+        }
+        else if(data.result[0].type_User==2){
+          this.route.navigate(["carrier"]);
+        }
+        else if(data.result[0].type_User==3){
+          this.route.navigate(["customer"]);
+        }
+      }
     });
   }
 
