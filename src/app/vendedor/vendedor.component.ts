@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServicesService } from "src/app/services.service";
 
 @Component({
   selector: 'app-vendedor',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendedorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router,public service:ServicesService) { }
+
+  
 
   ngOnInit(): void {
+  }
+
+  gotoMypublications(){
+    this.route.navigate(["myproducts"]);
+  }
+  gotoNewpublication(){
+    this.route.navigate(["newproduct"]);
   }
 
 }

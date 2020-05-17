@@ -54,6 +54,8 @@ import { CustomersHomeComponent } from './customers-home/customers-home.componen
 import { FindOrdersCarrierComponent } from './find-orders-carrier/find-orders-carrier.component';
 import { PopUpDataConfirmationComponent } from './registro/components/pop-up-data-confirmation/pop-up-data-confirmation.component';
 import { FindOrdersCustomerComponent } from './find-orders-customer/find-orders-customer.component';
+import { MyproductsComponent } from './myproducts/myproducts.component';
+import { NewproductComponent } from './newproduct/newproduct.component';
 
 
 
@@ -62,6 +64,8 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'vendedor', component: VendedorComponent },
+  { path: 'myproducts', component: MyproductsComponent },
+  { path: 'newproduct', component: NewproductComponent },
   { path: 'carrier', component: CarriersHomeComponent },
   { path: 'customer', component: CustomersHomeComponent },
   { path: 'ordersCustomer', component: FindOrdersCustomerComponent },
@@ -80,7 +84,9 @@ const routes: Routes = [
     CustomersHomeComponent,
     PopUpDataConfirmationComponent,
     FindOrdersCarrierComponent,
-    FindOrdersCustomerComponent
+    FindOrdersCustomerComponent,
+    MyproductsComponent,
+    NewproductComponent
   ],
   imports: [
     BrowserModule,
