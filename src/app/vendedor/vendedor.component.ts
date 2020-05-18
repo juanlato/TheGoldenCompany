@@ -16,11 +16,11 @@ export class VendedorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  gotoMypublications(){
-    this.route.navigate(["myproducts"]);
-  }
   gotoNewpublication(){
     this.route.navigate(["newproduct"]);
+  }
+  gotoMypublications(){
+    this.route.navigate(["myproducts"]);
   }
 
 }
