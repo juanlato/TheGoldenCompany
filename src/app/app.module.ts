@@ -56,7 +56,8 @@ import { PopUpDataConfirmationComponent } from './registro/components/pop-up-dat
 import { FindOrdersCustomerComponent } from './find-orders-customer/find-orders-customer.component';
 import { MyproductsComponent } from './myproducts/myproducts.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
-import { BuscadorComponent } from './buscador/buscador.component';
+import { ProductdetailpurchaseComponent } from './productdetailpurchase/productdetailpurchase.component';
+
 
 
 
@@ -71,6 +72,9 @@ const routes: Routes = [
   { path: 'customer', component: CustomersHomeComponent },
   { path: 'ordersCustomer', component: FindOrdersCustomerComponent },
   { path: 'ordersCarrier', component: FindOrdersCarrierComponent },
+  { path: 'productdetpur', component: ProductdetailpurchaseComponent },
+
+
   
 ];
 @NgModule({
@@ -88,7 +92,8 @@ const routes: Routes = [
     FindOrdersCustomerComponent,
     MyproductsComponent,
     NewproductComponent,
-    BuscadorComponent
+    ProductdetailpurchaseComponent,
+
   ],
   imports: [
     BrowserModule,
