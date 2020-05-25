@@ -20,6 +20,7 @@ import { CarriersHomeComponent } from './carriers-home/carriers-home.component';
 import { CustomersHomeComponent } from './customers-home/customers-home.component';
 import { FindOrdersCarrierComponent } from './find-orders-carrier/find-orders-carrier.component';
 import { PopUpDataConfirmationComponent } from './registro/components/pop-up-data-confirmation/pop-up-data-confirmation.component';
+import { MiCarritoComponent } from './mi-carrito/mi-carrito.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'carrier', component: CarriersHomeComponent },
   { path: 'customer', component: CustomersHomeComponent },
   { path: 'ordersCarrier', component: FindOrdersCarrierComponent },
+  { path: 'mi-carrito', component: MiCarritoComponent },
   
 ];
 @NgModule({
@@ -44,7 +46,8 @@ const routes: Routes = [
     CarriersHomeComponent, 
     CustomersHomeComponent,
     PopUpDataConfirmationComponent,
-    FindOrdersCarrierComponent
+    FindOrdersCarrierComponent,
+    MiCarritoComponent
   ],
   imports: [
     BrowserModule,
