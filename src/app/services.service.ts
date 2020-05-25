@@ -21,4 +21,15 @@ export class ServicesService {
     form.append("password", Password);
     return this.http.post<login>(this.urlService + '/SampleData/login', form);
   }
+  registro(name,lastname,birthday,idDocument,email,password,userType) {
+    var form = new FormData();
+    form.append("name", name);
+    form.append("lastname", lastname);
+    form.append("birthday", birthday);
+    form.append("idDocument", idDocument);
+    form.append("email", email);
+    form.append("password", password);
+    form.append("userType", userType);
+    return this.http.post<login>(this.urlService + '/SampleData/registro', form);
+  }
 }

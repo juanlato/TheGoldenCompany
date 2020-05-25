@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PopUpDataConfirmationComponent } from "./components/pop-up-data-confirmation/pop-up-data-confirmation.component";
-
+import { ServicesService } from "src/app/services.service";
 
 @Component({
   selector: 'app-registro',
@@ -18,12 +18,13 @@ export class RegistroComponent implements OnInit {
   public password;
   public passwordConfirm;
   public userType;
-
-  constructor(private route:Router,public dialog: MatDialog) { }
+ 
+  constructor(private route:Router,public dialog: MatDialog,public service:ServicesService) { }
 
   ngOnInit(): void {
   }
   registerUser(){
+      
     if(this.name==null){
 
     }
@@ -45,10 +46,29 @@ export class RegistroComponent implements OnInit {
     else if(this.userType==null){
 
     }else{
-      const dialogRef = this.dialog.open(PopUpDataConfirmationComponent, {width: '90%', height: 'auto',maxWidth:'450px'});
-
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.width='90%';
+      dialogConfig.height='auto';
+      dialogConfig.maxWidth='450px';
+      dialogConfig.data = {name:this.name,lastname: this.lastname,birthday: this.birthday,idDocument: this.idDocument,email: this.email,password: this.password,userType: this.userType};
+      const dialogRef = this.dialog.open(PopUpDataConfirmationComponent,dialogConfig);
       dialogRef.afterClosed().subscribe(result => {
-        if(result=="continue1"){this.route.navigate([""]);}
+        if(result=="continue"){
+          this.service.registro(this.name,this.lastname,this.birthday,this.idDocument,this.email,this.password,this.userType).subscribe(data=>{
+            if(data!=null){
+              if(data.hasError==false){
+                //this.route.navigate([""]);
+              }
+              else{
+                
+              }
+            }else{
+
+            }            
+            
+          });
+          
+        }
         console.log(result);
       });
     }
