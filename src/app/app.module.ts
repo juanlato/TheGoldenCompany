@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -43,6 +43,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import {A11yModule} from '@angular/cdk/a11y';
+import {ClipboardModule} from '@angular/cdk/clipboard';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {PortalModule} from '@angular/cdk/portal';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkStepperModule} from '@angular/cdk/stepper';
+import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTreeModule} from '@angular/cdk/tree';
 
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -56,9 +64,7 @@ import { PopUpDataConfirmationComponent } from './registro/components/pop-up-dat
 import { FindOrdersCustomerComponent } from './find-orders-customer/find-orders-customer.component';
 import { MyproductsComponent } from './myproducts/myproducts.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
-
-
-
+import { AlertComponent } from './alert/alert.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -86,7 +92,8 @@ const routes: Routes = [
     FindOrdersCarrierComponent,
     FindOrdersCustomerComponent,
     MyproductsComponent,
-    NewproductComponent
+    NewproductComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -131,10 +138,55 @@ const routes: Routes = [
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),    
     ],
-  exports: [RouterModule],
+  exports: [
+    RouterModule,
+    A11yModule,
+    ClipboardModule,
+    CdkStepperModule,
+    CdkTableModule,
+    CdkTreeModule,
+    DragDropModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+    PortalModule,
+    ScrollingModule,
+  ],
   bootstrap: [AppComponent],
-  entryComponents:[PopUpDataConfirmationComponent]
+  entryComponents:[PopUpDataConfirmationComponent,AlertComponent]
 })
 export class AppModule { }
