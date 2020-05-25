@@ -127,8 +127,8 @@ const routes: Routes = [
     MatTreeModule,
     RouterModule.forRoot(routes),    
     ],
-  exports: [RouterModule
-  ],
+  exports: [RouterModule],
   bootstrap: [AppComponent],
+  entryComponents:[PopUpDataConfirmationComponent]
 })
 export class AppModule { }
