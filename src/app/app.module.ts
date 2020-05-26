@@ -67,6 +67,7 @@ import { MyproductsComponent } from './myproducts/myproducts.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
 import { AlertComponent } from './alert/alert.component';
 import { ProductdetailpurchaseComponent } from './productdetailpurchase/productdetailpurchase.component';
+import { AddrCustComponent } from './addr-cust/addr-cust.component';
 
 
 
@@ -85,6 +86,7 @@ const routes: Routes = [
   { path: 'ordersCarrier', component: FindOrdersCarrierComponent },
   { path: 'mi-carrito', component: MiCarritoComponent },
   { path: 'productdetpur', component: ProductdetailpurchaseComponent },
+  { path: 'addressCustomer', component: AddrCustComponent },
 
 
   
@@ -107,6 +109,7 @@ const routes: Routes = [
     NewproductComponent,
     AlertComponent,
     ProductdetailpurchaseComponent,
+    AddrCustComponent,
 
   ],
   imports: [

@@ -17,5 +17,9 @@ export class MiCarritoComponent implements OnInit {
     this.route.navigate(["customer"]);
   }
 
+  gotoAddr(){
+    this.route.navigate(["addressCustomer"]);
+  }
+
 }
 
