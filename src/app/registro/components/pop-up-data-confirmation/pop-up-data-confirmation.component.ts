@@ -32,13 +32,13 @@ export class PopUpDataConfirmationComponent implements OnInit {
         this.birthday=data.birthday;
       }
       if(data.email!=undefined){
-        this.email=data.idDocument;
+        this.email=data.email;
       }
       if(data.idDocument!=undefined){
         this.idDocument=data.idDocument;
       }
       if(data.userType!=undefined){
-        this.userType=data.userType;
+        this.userType=data.userType-1;
       }
      }
 

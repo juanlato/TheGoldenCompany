@@ -5,33 +5,111 @@
             Registrarse
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Nombres</b></div> <input [(ngModel)]="this.name" placeholder="Ej. Juan David" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Nombres</b></div>
+                <mat-form-field>
+                    <mat-label>Nombres</mat-label>
+                    <input matInput [formControl]="this.name" [errorStateMatcher]="matcher"
+                        placeholder="Juan David">
+                    <mat-error *ngIf="name.hasError('text') && !name.hasError('required')">
+                        Please enter a valid name
+                    </mat-error>
+                    <mat-error *ngIf="name.hasError('required')">
+                        Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Apellidos</b></div> <input [(ngModel)]="this.lastname" placeholder="Ej.Ayala lizarazo" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Apellidos</b></div> 
+                <mat-form-field>
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput [formControl]="this.lastname" [errorStateMatcher]="matcher"
+                        placeholder="Ayala Lizarazo">
+                    <mat-error *ngIf="lastname.hasError('text') && !lastname.hasError('required')">
+                        Please enter a valid lastname 
+                    </mat-error>
+                    <mat-error *ngIf="lastname.hasError('required')">
+                        Lastname is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Cumpleaños</b></div><input [(ngModel)]="this.birthday" placeholder="MM/DD/YYYY" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Cumpleaños</b></div>
+            <mat-form-field>
+                <mat-label>Elija una fecha</mat-label>
+                <input matInput [formControl]="this.birthday" [(ngModel)]="this.birthday1" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-error *ngIf="birthday.hasError('required')">
+                    birthday is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b># Documento</b></div><input [(ngModel)]="this.idDocument" placeholder="1234567890" class="inputlog" type="text">
+            <div class="titleNameReg"><b># Documento</b></div><mat-form-field>
+                <mat-label># Documento</mat-label>
+                <input matInput [formControl]="this.idDocument" [errorStateMatcher]="matcher"
+                    placeholder="*******">
+                <mat-error *ngIf="idDocument.hasError('number') && !idDocument.hasError('required')">
+                    Please enter a valid document
+                </mat-error>
+                <mat-error *ngIf="idDocument.hasError('required')">
+                    Document is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Email</b></div><input [(ngModel)]="this.email" placeholder="TheGoldenCompany@gmail.com" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Email</b></div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput [formControl]="this.emailFormControl" [errorStateMatcher]="matcher"
+                    placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Contraseña</b></div><input [(ngModel)]="this.password" placeholder="........." class="inputlog" type="password">
+            <div class="titleNameReg"><b>Contraseña</b></div>
+            <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input matInput [formControl]="this.password" type="password" [errorStateMatcher]="matcher"
+                    placeholder="*******">
+                <mat-error *ngIf="password.hasError('password') && !password.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="password.hasError('required')">
+                    password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Confirmar Contraseña</b></div><input [(ngModel)]="this.passwordConfirm" placeholder="........." class="inputlog" type="password">
+            <div class="titleNameReg"><b>Confirmar Contraseña</b></div>
+            <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input matInput [formControl]="this.passwordConfirm" type="password" [errorStateMatcher]="matcher"
+                    placeholder="*******">
+                <mat-error *ngIf="passwordConfirm.hasError('password') && !passwordConfirm.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="passwordConfirm.hasError('required')">
+                    password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Tipo de usuario</b></div><select class="inputlog" [(ngModel)]="this.userType"  >
-                <option value=null>Seleccione un tipo de usuario</option>
-                <option value=1>Proveedor</option>
-                <option value=2>Trasportador</option>
-                <option value=3>Cliente</option>
-            </select>
+            <div class="titleNameReg"><b>Tipo de usuario</b></div>
+            <mat-form-field>
+                <mat-label>Elija un tipo de usuario</mat-label>
+                <mat-select [formControl]="userType" name="food">
+                    <mat-option [value]="1">Proveedor</mat-option>
+                    <mat-option [value]="2">Trasportador</mat-option>
+                    <mat-option [value]="3">Cliente</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
         <div class="buttons">
             <div class="buttonRegister" (click)="this.backToPage()">

@@ -5,7 +5,7 @@
            <div class="nameClient"><b>{{this.userInfo.name+this.userInfo.lastname}}</b> </div> 
            <div class="imageClient"><img class="userImage" src="./../../assets/img/vendedor.png" alt=""></div>
            <div class="personalData">
-               <div class="personalInfo"><b>Cumpleaños:</b>{{this.userInfo.birthday}}</div>
+               <div class="personalInfo"><b>Cumpleaños:</b>{{this.userInfo.birthday.substring(3,15)}}</div>
                <div class="personalInfo"><b>Email:</b><p>{{this.userInfo.email}}</p></div>
                <div class="personalInfo"><b># Documento:</b><p>{{this.userInfo.document_id}}</p></div>
            </div>
