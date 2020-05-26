@@ -1,51 +1,48 @@
 <app-header></app-header>
 <div class="generalBox">
     <div class="containerBox">
-        <div>
-            <div class="personalInfo">
-                <div class="transpData">Documento:</div><div class="dots">........................................</div> <div class="transpInfo">5019283727</div>
-                <div class="transpData">Dirección:</div><div class="dots">........................................</div> <div class="transpInfo">Cll.81-Sur #32-55/ Bogotá-Colombia</div> 
-                <div class="transpData">Código de ID:</div><div class="dots">........................................</div> <div class="transpInfo">103GD93G</div> 
-                <div class="transpData">Usuario:</div><div class="dots">........................................</div> <div class="transpInfo">Transportador</div> 
+        <div class="userInfo">
+            <div class="nameClient"><b>{{this.userInfo.name+this.userInfo.lastname}}</b> </div>
+            <div class="imageClient"><img class="userImage" src="./../../assets/img/vendedor.png" alt=""></div>
+            <div class="personalData">
+                <div class="personalInfo"><b>Cumpleaños:</b>{{this.userInfo.birthday.substring(3,15)}}</div>
+                <div class="personalInfo"><b>Email:</b>
+                    <p>{{this.userInfo.email}}</p>
+                </div>
+                <div class="personalInfo"><b># Documento:</b>
+                    <p>{{this.userInfo.document_id}}</p>
+                </div>
             </div>
-
-            <div class="TripInfo">
-
-             <div class="Trips">
-                 <div>Remesa</div> <div>Dirección</div> <div>Estátus</div> 
-             </div> 
-            
-             <div class="TripData">
-                 <div>Tomates: 200Kg</div> <div>Bogotá Km 31 Vía Subachoque - Cundinamarca</div> <div>Entregado</div> 
-                 <div>Papa Criolla: 400Kg</div> <div>Tunja Km 11 Vía Sutamarchán - Boyacá</div> <div>Disponible</div> 
-                 <div>Acelga: 150Kg</div> <div>Ubaté Km 4 Vía Zipaquirá - Cundinamarca</div> <div>Disponible</div> 
-                 <div>Berenjena: 350Kg</div> <div>Ibagué Ruta 43 Km 21 Vía Honda - Tolima</div> <div>Disponible</div> 
-             </div>  
-
-            </div> 
+            <div class="buttonRegister" (click)="this.gotoFindOrders()">
+                <b>Buscar Orden</b>
+            </div>
         </div>
-        
-        <div class="First_profile">
-            <div class="TranspName">
-             <b>(Nombre del transportador)</b>
-            </div> 
 
-            <div><img class="img_no_disp" src="./../../assets/img/imagen-no-disponible-png-4.png"></div>  
-
-            <div class="buttonsTransp">
-                <div class="buttonRemesas" (click)="this.gotoFindOrders()">
-                    <b>Buscar Remesas</b>
+        <div class="myOrders">
+            <div class="titleMyOrders">
+                <b>Mis Ordenes</b>
+            </div>
+            <div class="tableOrders">
+                <div class="tableTitles">
+                    <div>Orden</div>
+                    <div class="resposiveMin">Direccion</div>
+                    <div class="resposiveMin">Precio</div>
+                    <div class="resposiveMin">Peso</div>
                 </div>
-                <div class="buttonVehiculo">
-                    <b>Registrar Vehículo</b>
+                <div class="tableItemsW">
+                    <div><b class="resposiveMinTitle"># Orden:</b> 102</div>
+                    <div><b class="resposiveMinTitle">Descripción:</b>cll 6d # 88d 59</div>
+                    <div><b class="resposiveMinTitle">Precio:</b>500000</div>
+                    <div><b class="resposiveMinTitle">Estado:</b>200kg</div>
                 </div>
-                <div class="buttonPagos">
-                    <b>Mis Pagos</b>
+                <div class="tableItemsG">
+                    <div><b class="resposiveMinTitle"># Orden:</b> 108</div>
+                    <div><b class="resposiveMinTitle">Descripción:</b>cll 6d # 88d 59</div>
+                    <div><b class="resposiveMinTitle">Precio:</b>400000</div>
+                    <div><b class="resposiveMinTitle">Estado:</b>120kg</div>
                 </div>
             </div>
-
-        </div>   
-
+        </div>
     </div>
 </div>
 <app-footer></app-footer>

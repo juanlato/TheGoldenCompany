@@ -11,16 +11,13 @@ export class VendedorComponent implements OnInit {
 
   constructor(private route:Router,public service:ServicesService) { }
 
-  
+  public userInfo:any;
 
   ngOnInit(): void {
+    this.userInfo=JSON.parse(sessionStorage.getItem("login")).result[0];
   }
 
   gotoNewpublication(){
     this.route.navigate(["newproduct"]);
   }
-  gotoMypublications(){
-    this.route.navigate(["myproducts"]);
-  }
-
 }

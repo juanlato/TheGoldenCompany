@@ -3,148 +3,116 @@
     float: left
     width: 100%
 .containerBox
-    margin-top: 115px
-    margin-bottom: 120px
+    margin-top: 60px
+    margin-bottom: 60px
     margin-left: auto
     margin-right: auto
-    max-width: 2000px
-    width: 90%
+    max-width: 1200px
+    width: 80%
     display: grid
-    grid-template-columns:  60% 40%
-    column-gap: 30px
-
+    grid-template-columns: 65% 30%
+    grid-column-gap: 5%
+    grid-row-gap: 20px
+.userInfo
+     grid-column: 2
+     grid-row: 1
+.nameClient
+    text-align: center
+    background-color: #dddddd
+    min-height: 40px
+    padding-top: 10px
+    font-size: 15px
+    border: solid 1px #000000
+    border-bottom: none
+    border-radius: 20px 20px 0px 0px
+.imageClient
+    border: solid 1px #000000
+.userImage
+    width: 100%    
+.personalData   
+    background-color: #dddddd
+    border: solid 1px #000000
+    border-top: none
+    border-radius: 0px 0px 20px 20px 
+    min-height: 210px
 .personalInfo
-     width: 100%
-     border-radius: 5px
-     height: auto
-     grid-template-columns: 30% 40% 30%
-     margin-top: 40px
-     font-size: 20px
-     display: grid
-     background-color: #DDDDDD
-     padding-top: 5px
-     padding-bottom: 5px
-     row-gap: 10px
+    padding: 5px    
 
-.dots
-     font-size: 15px
-     text-align: center
-     font-style: italic
-     font-family: monospace
-     color: #808080    
-
-.transpData
-     font-size: 18px
-     padding-left: 60px
-     text-align: left
-     font-style: italic
-     font-family: monospace
-     color: #404040
-
-.transpInfo
-     font-size: 18px
-     padding-right: 60px
-     text-align: right
-     font-style: italic
-     font-family: monospace
-     color: #404040
-
-.First_profile
-     width: 80%
-     text-align: center
-     font-size: 25px
-     height: auto
-     font-style: italic
-     font-family: monospace
-     display: grid
-     grid-template-columns: 100%
-     background-color: #DDDDDD
-     border-radius: 20px 
-
-.TripInfo
-     width: 100%
-     background-color: #DDDDDD
-     margin-bottom: 30px
-     border-radius: 5px
-
-.Trips
-     width: 100%
-     text-align: center
-     margin-top: 60px
-     font-size: 30px
-     height: auto
-     font-style: italic
-     font-family: monospace
-     display: grid
-     grid-template-columns: 25% 50% 25%
-     padding-top: 10px
-     
-.TripData
-     width: 100%
-     text-align: center
-     margin-top: 40px
-     font-size: 17px
-     height: auto
-     font-style: italic
-     font-family: monospace
-     display: grid
-     grid-template-columns: 25% 50% 25%
-     row-gap: 10px
-     padding-bottom: 10px
-
-.TranspName
-     text-align: center
-     font-size: 70%
-     margin-right: auto
-     margin-left: auto
-     margin-bottom: 15px
-     margin-top: 30px
-     display: grid
-
-.img_no_disp
-    margin-top: 5px
-    margin-right: auto
-    margin-left: auto
-    width: 300px
-    height: auto
+.ofertasTitle
+    text-align: center
+    width: 100%
+    background-color: #dddddd
+    border-radius: 20px
+    height: 40px
+    padding-top: 10px
+.myOrders
+    width: 100%
+    grid-column: 1/2
+.titleMyOrders
+    text-align: center
+    width: 100%
+    background-color: #dddddd
+    border-radius: 20px
+    height: 40px
+    padding-top: 10px
+.tableOrders
+    border: solid 1px #000000
+    margin-top: 20px
+.tableTitles
+    width: 100%
+    display: grid
+    grid-template-columns: 10% 60% 20% 10%
+    background-color: #000000
+    color: #ffffff
+    text-align: center
+    padding-top: 10px
+    min-height: 40px
+.tableItemsW    
+    width: 100%
+    display: grid
+    grid-template-columns: 10% 60% 20% 10%
     background-color: #ffffff
-
-.buttonsTransp
-     width: 302px
-     grid-template-columns: 100%
+    text-align: center
+    padding-top: 10px
+    min-height: 40px
+.tableItemsG    
+    width: 100%
+    display: grid
+    grid-template-columns: 10% 60% 20% 10%
+    background-color: #dddddd
+    text-align: center
+    padding-top: 10px
+    min-height: 40px
+.resposiveMin
+    display: block
+.resposiveMinTitle
+    display: none
+.buttonRegister
      margin-top: 20px
-     display: grid
-     grid-row-gap: 30px
-     margin-right: auto
-     margin-left: auto
-
-.buttonRemesas
-     height: 40px
+     margin-right: 5px
+     height: 30px
      text-align: center
      border-radius: 20px
      background-color: #f5ab65
-     padding-top: 10px
+     padding-top: 5px
      font-family: monospace
      color: #ffffff
      cursor: pointer
-
-.buttonVehiculo
-     height: 40px
-     text-align: center
-     border-radius: 20px
-     background-color: #f5ab65
-     padding-top: 10px
-     font-family: monospace
-     color: #ffffff
-     cursor: pointer
-
-.buttonPagos
-     height: 40px
-     margin-bottom: 30px
-     text-align: center
-     border-radius: 20px
-     background-color: #f5ab65
-     padding-top: 10px
-     font-family: monospace
-     color: #ffffff
-     cursor: pointer
+@media only screen and (max-width: 730px)
+    .containerBox
+         grid-template-columns: 100%
+    .userInfo
+        grid-column: 1
+        grid-row: 1 
+    .myOrders
+        grid-column:  1
+    .tableTitles
+        grid-template-columns: 100%
+    .tableItemsG ,.tableItemsW   
+        grid-template-columns: 100%
+        text-align: left
+        padding-left: 5px
+    .resposiveMinTitle
+         display: block
+    .resposiveMin
+        display: none

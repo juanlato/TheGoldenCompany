@@ -1,11 +1,48 @@
 <app-header></app-header>
-<div class="username">Vendedor El Kokun v:</div>
-<div class="containerBox">
-<div class="grida">
-<div class="item1">en esta seccion van los datos del usuario vendedor, una descripcion y tal ves algun numero de telefono</div>
-<div class="item2"><img class="logo" src="./../../assets/img/vendedor.png"></div>
-<div class="item3" (click)="this.gotoMypublications()">publicaciones</div>
-<div class="item4" (click)="this.gotoNewpublication()">publicar producto</div>
-</div>
+<div class="generalBox">
+    <div class="containerBox">
+        <div class="userInfo">
+            <div class="nameClient"><b>{{this.userInfo.name+this.userInfo.lastname}}</b> </div>
+            <div class="imageClient"><img class="userImage" src="./../../assets/img/vendedor.png" alt=""></div>
+            <div class="personalData">
+                <div class="personalInfo"><b>Cumpleaños:</b>{{this.userInfo.birthday.substring(3,15)}}</div>
+                <div class="personalInfo"><b>Email:</b>
+                    <p>{{this.userInfo.email}}</p>
+                </div>
+                <div class="personalInfo"><b># Documento:</b>
+                    <p>{{this.userInfo.document_id}}</p>
+                </div>
+            </div>
+            <div class="buttonRegister" (click)="this.gotoNewpublication()">
+                <b>Nueva publicacion</b>
+            </div>
+        </div>
+
+        <div class="myOrders">
+            <div class="titleMyOrders">
+                <b>Mis productos publicados</b> 
+             </div>
+             <div class="tableOrders">
+                <div class="tableTitles">
+                    <div >Orden</div>
+                    <div class="resposiveMin">Descripción</div>
+                    <div class="resposiveMin">Precio</div>
+                    <div class="resposiveMin">Estado</div>
+                 </div>
+                 <div class="tableItemsW">
+                    <div><b class="resposiveMinTitle"># Orden:</b> 102</div>
+                    <div><b class="resposiveMinTitle">Descripción:</b>Aguacates 20 kg , Arroz 2000kg , leche 120 lt</div>
+                    <div><b class="resposiveMinTitle">Precio:</b>500000</div>
+                    <div><b class="resposiveMinTitle">Estado:</b>En camino</div>
+                 </div> 
+                 <div class="tableItemsG">
+                    <div><b class="resposiveMinTitle"># Orden:</b> 108</div>
+                    <div><b class="resposiveMinTitle">Descripción:</b>Aguacates 10 kg , Arroz 5000kg , leche 20 lt</div>
+                    <div><b class="resposiveMinTitle">Precio:</b>400000</div>
+                    <div><b class="resposiveMinTitle">Estado:</b>Entregado</div>
+                 </div> 
+             </div>                           
+        </div>       
+    </div>
 </div>
 <app-footer></app-footer>

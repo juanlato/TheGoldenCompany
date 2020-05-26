@@ -1,63 +1,118 @@
-.username
-    position: relative
-    text-align: center
-    font-size: 40px
-    font-style: italic
-    font-family: monospace
-    width: auto
-    height: 150px
-    top: 40px
-
+.generalBox
+    height: auto
+    float: left
+    width: 100%
 .containerBox
     margin-top: 60px
     margin-bottom: 60px
     margin-left: auto
     margin-right: auto
     max-width: 1200px
-    width: 70%
-
-.item1
-    grid-area: sp1
-    background-color: #f5ab65
-    width: auto
-    height: auto
-    border-radius: 15px
-    padding: 10px
-.item2
-    grid-area: sp2
-    background-color: #f5ab65
-    width: 300px
-    height: fit-content
-    border-radius: 15px
-.item3
-    grid-area: sp3
-    background-color: #f5ab65
-    width: 300px
-    height: fit-content
-    text-align: center
-    border-radius: 15px
-.item4
-    grid-area: sp4
-    background-color: #f5ab65
-    width: 300px
-    height: fit-content
-    text-align: center
-    border-radius: 15px
-    
-.grida
+    width: 80%
     display: grid
-    grid-template-areas: 'sp1 sp1 sp1 sp2 sp2' 'sp1 sp1 sp1 sp2 sp2' 'sp1 sp1 sp1 sp3 sp3' 'sp1 sp1 sp1 sp4 sp4' 'sp1 sp1 sp1 . .' ;
-    grid-gap: 10px;
-    background-color: #e48728
-    padding: 10px;
-    height: fit-content
-    border-radius: 10px
-    width: auto
-.logo
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: auto;
-    display: block;
+    grid-template-columns: 65% 30%
+    grid-column-gap: 5%
+    grid-row-gap: 20px
+.userInfo
+     grid-column: 2
+     grid-row: 1
+.nameClient
+    text-align: center
+    background-color: #dddddd
+    min-height: 40px
+    padding-top: 10px
+    font-size: 15px
+    border: solid 1px #000000
+    border-bottom: none
+    border-radius: 20px 20px 0px 0px
+.imageClient
+    border: solid 1px #000000
+.userImage
+    width: 100%    
+.personalData   
+    background-color: #dddddd
+    border: solid 1px #000000
+    border-top: none
+    border-radius: 0px 0px 20px 20px 
+    min-height: 210px
+.personalInfo
+    padding: 5px    
+
+.ofertasTitle
+    text-align: center
+    width: 100%
+    background-color: #dddddd
+    border-radius: 20px
+    height: 40px
+    padding-top: 10px
+.myOrders
+    width: 100%
+    grid-column: 1/2
+.titleMyOrders
+    text-align: center
+    width: 100%
+    background-color: #dddddd
+    border-radius: 20px
+    height: 40px
+    padding-top: 10px
+.tableOrders
+    border: solid 1px #000000
+    margin-top: 20px
+.tableTitles
+    width: 100%
+    display: grid
+    grid-template-columns: 10% 60% 20% 10%
+    background-color: #000000
+    color: #ffffff
+    text-align: center
+    padding-top: 10px
+    min-height: 40px
+.tableItemsW    
+    width: 100%
+    display: grid
+    grid-template-columns: 10% 60% 20% 10%
+    background-color: #ffffff
+    text-align: center
+    padding-top: 10px
+    min-height: 40px
+.tableItemsG    
+    width: 100%
+    display: grid
+    grid-template-columns: 10% 60% 20% 10%
+    background-color: #dddddd
+    text-align: center
+    padding-top: 10px
+    min-height: 40px
+.resposiveMin
+    display: block
+.resposiveMinTitle
+    display: none
+.buttonRegister
+     margin-top: 20px
+     margin-right: 5px
+     height: 30px
+     text-align: center
+     border-radius: 20px
+     background-color: #f5ab65
+     padding-top: 5px
+     font-family: monospace
+     color: #ffffff
+     cursor: pointer
+@media only screen and (max-width: 730px)
+    .containerBox
+         grid-template-columns: 100%
+    .userInfo
+        grid-column: 1
+        grid-row: 1 
+    .myOrders
+        grid-column:  1
+    .tableTitles
+        grid-template-columns: 100%
+    .tableItemsG ,.tableItemsW   
+        grid-template-columns: 100%
+        text-align: left
+        padding-left: 5px
+    .resposiveMinTitle
+         display: block
+    .resposiveMin
+        display: none
