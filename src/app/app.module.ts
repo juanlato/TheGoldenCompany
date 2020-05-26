@@ -66,6 +66,11 @@ import { FindOrdersCustomerComponent } from './find-orders-customer/find-orders-
 import { MyproductsComponent } from './myproducts/myproducts.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
 import { AlertComponent } from './alert/alert.component';
+import { ProductdetailpurchaseComponent } from './productdetailpurchase/productdetailpurchase.component';
+
+
+
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -78,6 +83,9 @@ const routes: Routes = [
   { path: 'ordersCustomer', component: FindOrdersCustomerComponent },
   { path: 'ordersCarrier', component: FindOrdersCarrierComponent },
   { path: 'mi-carrito', component: MiCarritoComponent },
+  { path: 'productdetpur', component: ProductdetailpurchaseComponent },
+
+
   
 ];
 @NgModule({
@@ -96,7 +104,9 @@ const routes: Routes = [
     FindOrdersCustomerComponent,
     MyproductsComponent,
     NewproductComponent,
-    AlertComponent
+    AlertComponent,
+    ProductdetailpurchaseComponent,
+
   ],
   imports: [
     BrowserModule,
