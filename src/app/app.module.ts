@@ -26,7 +26,7 @@ import { MiCarritoComponent } from './mi-carrito/mi-carrito.component';
 
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'vendedor', component: VendedorComponent },
   { path: 'carrier', component: CarriersHomeComponent },
