@@ -104,7 +104,10 @@ export class RegistroComponent implements OnInit {
    // 
   }
   backToPage(){
-    this.route.navigate([""]);
+    this.service.geoCode("").subscribe(data=>{
+
+    });
+    //this.route.navigate([""]);
   }
 
 }

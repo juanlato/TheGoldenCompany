@@ -32,4 +32,7 @@ export class ServicesService {
     form.append("userType", userType);
     return this.http.post<login>(this.urlService + '/SampleData/registro', form);
   }
+  geoCode(dir){
+    return this.http.get<login>("https://maps.googleapis.com/maps/api/geocode/json?address="+dir+"&key=AIzaSyA_VYyQbgpY2wLb7B_5Wh4rrrM9d3TWupg");
+  }
 }

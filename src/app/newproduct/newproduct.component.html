@@ -3,19 +3,56 @@
     <div class="boxContainer">
 
         <div class="gridNewp">
-            <div class="item1" ><img class="pim" src="./../../assets/img/imagen-no-disponible-png-4.png"></div>
-            <div class="item2"><input [(ngModel)]="this.prName" placeholder="nombre producto" class="inputprname" type="text"></div>
-            <div class="item3"><input [(ngModel)]="this.prDescription" placeholder="descripcion producto" class="inputprdesc" type="text"></div>
-            <div class="item4"><p>test text 4</p></div>
-            <div class="item5"><input [(ngModel)]="this.prValue" placeholder="Precio producto" class="inputprval" type="text"></div>
-            <div class="item6"><p>subir imagen</p></div>
-            <div class="item7"><p>publicar</p></div>
-            <div class="item8"><input [(ngModel)]="this.prAddress" placeholder="Direccion recogida" class="inputpradr" type="text"></div>
-            <div class="item9"><p>buscar direccion</p></div>
-            <div class="item10"><p>insertar mapa v:</p></div>
-            <div class="item11" (click)="this.gotoBack()"><p>volver</p></div>
+            <div class="item1"><img class="pim" src="./../../assets/img/imagen-no-disponible-png-4.png"></div>
+            <div class="item2"><input [(ngModel)]="this.prName" placeholder="nombre producto" class="inputprname"
+                    type="text"></div>
+            <div class="item3"><input [(ngModel)]="this.prDescription" placeholder="descripcion producto"
+                    class="inputprdesc" type="text"></div>
+            <div class="item4">
+                <input [(ngModel)]="this.prNumber" placeholder="Cantidad" class="inputpradr"
+                    type="number">
+            </div>
+            <div class="item5"><input [(ngModel)]="this.prValue" placeholder="Precio producto" class="inputprval"
+                    type="text"></div>
+            <div class="item6">
+                <div class="buttonRegister">
+                    <b>Subir imagen</b>
+                </div>
+            </div>
+            <div class="item7">
+                <div class="buttonRegister" (click)="this.gotoBack()">
+                    <b>Volver</b>
+                </div>
+            </div>
+            <div class="item8"><input [(ngModel)]="this.prAddress" placeholder="Direccion recogida" class="inputpradr"
+                    type="text"></div>
+            <div class="item9">
+                <div class="buttonRegister">
+                    <b>Buscar direccion</b>
+                </div>
+            </div>
+            <div class="item10">
+                <google-map height="500px" width="100%" [zoom]="zoom" [center]="center" [options]="options">
+
+                    <map-marker #markerElem *ngFor="let marker of markers" [position]="marker.position"
+                        [label]="marker.label" [title]="marker.title" [options]="marker.options"
+                        (mapClick)="openInfo(markerElem, marker.info)">
+
+                    </map-marker>
+
+                    <map-info-window>
+                        {{infoContent}}
+                    </map-info-window>
+
+                </google-map>
+            </div>
+            <div class="item11" >
+                <div class="buttonRegister">
+                    <b>Publicar</b>
+                </div>
+            </div>
         </div>
-        
+
     </div>
 </div>
 <app-footer></app-footer>
