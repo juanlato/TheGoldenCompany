@@ -1,7 +1,6 @@
 <app-header></app-header>
 <div class="generalBox">
-    <div class="containerBox">
-    
+    <div class="containerBox">    
         <div class="Info_Map">
             <div class="Info">
                 <div class="Dir">
@@ -11,8 +10,24 @@
                     <input  placeholder="Distancia Máxima" class="inputlog" type="text">
                 </div>
             </div>
+            <div class="map">
+                <google-map height="500px" width="100%" [zoom]="zoom" [center]="center"
+                [options]="options" >
+                  
+                <map-marker #markerElem *ngFor="let marker of markers"
+                  [position]="marker.position" [label]="marker.label"
+                  [title]="marker.title" [options]="marker.options"
+                  (mapClick)="openInfo(markerElem, marker.info)" >
+                  
+                </map-marker>
+                
+                <map-info-window >
+                {{infoContent}}
+                </map-info-window>
+                
+                </google-map>
+            </div>            
         </div>
-
         <div class="Opciones">
             <div class="but">
                 Valor Carga : $150.000.00
