@@ -12,9 +12,35 @@ export interface DialogData {
   styleUrls: ['./pop-up-data-confirmation.component.sass']
 })
 export class PopUpDataConfirmationComponent implements OnInit {
+  public name;
+  public lastname;
+  public birthday;
+  public idDocument;
+  public email;
+  public userType;
+  public userOp=["proveedor","trasportador","cliente"];
 
   constructor(public dialogRef: MatDialogRef<PopUpDataConfirmationComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+    @Inject(MAT_DIALOG_DATA) public data: any) {
+      if(data.name!=undefined){
+        this.name=data.name;
+      }
+      if(data.lastname!=undefined){
+        this.lastname=data.lastname;
+      }
+      if(data.birthday!=undefined){
+        this.birthday=data.birthday;
+      }
+      if(data.email!=undefined){
+        this.email=data.idDocument;
+      }
+      if(data.idDocument!=undefined){
+        this.idDocument=data.idDocument;
+      }
+      if(data.userType!=undefined){
+        this.userType=data.userType;
+      }
+     }
 
   ngOnInit(): void {
   }

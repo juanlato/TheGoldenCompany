@@ -2,32 +2,43 @@
     position: relative
     text-align: center
     font-size: 40px
+    font-style: italic
+    font-family: monospace
     width: auto
     height: 150px
     top: 40px
 
+.containerBox
+    margin-top: 60px
+    margin-bottom: 60px
+    margin-left: auto
+    margin-right: auto
+    max-width: 1200px
+    width: 70%
+
 .item1
     grid-area: sp1
-    background-color: #ce429f
-    width: 450px
+    background-color: #f5ab65
+    width: auto
     height: auto
     border-radius: 15px
+    padding: 10px
 .item2
     grid-area: sp2
-    background-color: #ce429f
+    background-color: #f5ab65
     width: 300px
     height: fit-content
     border-radius: 15px
 .item3
     grid-area: sp3
-    background-color: #ce429f
+    background-color: #f5ab65
     width: 300px
     height: fit-content
     text-align: center
     border-radius: 15px
 .item4
     grid-area: sp4
-    background-color: #ce429f
+    background-color: #f5ab65
     width: 300px
     height: fit-content
     text-align: center
@@ -37,10 +48,11 @@
     display: grid
     grid-template-areas: 'sp1 sp1 sp1 sp2 sp2' 'sp1 sp1 sp1 sp2 sp2' 'sp1 sp1 sp1 sp3 sp3' 'sp1 sp1 sp1 sp4 sp4' 'sp1 sp1 sp1 . .' ;
     grid-gap: 10px;
-    background-color: #900361;
+    background-color: #e48728
     padding: 10px;
     height: fit-content
     border-radius: 10px
+    width: auto
 .logo
     margin-top: 5px;
     margin-bottom: 5px;

@@ -5,25 +5,33 @@
             Registrarse
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Nombres</b></div> <input placeholder="Ej. Juan David" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Nombres</b></div> <input [(ngModel)]="this.name" placeholder="Ej. Juan David" class="inputlog" type="text">
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Apellidos</b></div> <input placeholder="Ej.Ayala lizarazo" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Apellidos</b></div> <input [(ngModel)]="this.lastname" placeholder="Ej.Ayala lizarazo" class="inputlog" type="text">
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Cumpleaños</b></div><input placeholder="MM/DD/YYYY" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Cumpleaños</b></div><input [(ngModel)]="this.birthday" placeholder="MM/DD/YYYY" class="inputlog" type="text">
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b># Documento</b></div><input placeholder="1234567890" class="inputlog" type="text">
+            <div class="titleNameReg"><b># Documento</b></div><input [(ngModel)]="this.idDocument" placeholder="1234567890" class="inputlog" type="text">
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Email</b></div><input placeholder="TheGoldenCompany@gmail.com" class="inputlog" type="text">
+            <div class="titleNameReg"><b>Email</b></div><input [(ngModel)]="this.email" placeholder="TheGoldenCompany@gmail.com" class="inputlog" type="text">
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Contraseña</b></div><input placeholder="........." class="inputlog" type="password">
+            <div class="titleNameReg"><b>Contraseña</b></div><input [(ngModel)]="this.password" placeholder="........." class="inputlog" type="password">
         </div>
         <div class="inputLogin">
-            <div class="titleNameReg"><b>Confirmar Contraseña</b></div><input placeholder="........." class="inputlog" type="password">
+            <div class="titleNameReg"><b>Confirmar Contraseña</b></div><input [(ngModel)]="this.passwordConfirm" placeholder="........." class="inputlog" type="password">
+        </div>
+        <div class="inputLogin">
+            <div class="titleNameReg"><b>Tipo de usuario</b></div><select class="inputlog" [(ngModel)]="this.userType"  >
+                <option value=null>Seleccione un tipo de usuario</option>
+                <option value=1>Proveedor</option>
+                <option value=2>Trasportador</option>
+                <option value=3>Cliente</option>
+            </select>
         </div>
         <div class="buttons">
             <div class="buttonRegister" (click)="this.backToPage()">

@@ -3,24 +3,22 @@ import { Router } from '@angular/router';
 import { ServicesService } from "src/app/services.service";
 
 @Component({
-  selector: 'app-vendedor',
-  templateUrl: './vendedor.component.html',
-  styleUrls: ['./vendedor.component.sass']
+  selector: 'app-myproducts',
+  templateUrl: './myproducts.component.html',
+  styleUrls: ['./myproducts.component.sass']
 })
-export class VendedorComponent implements OnInit {
+export class MyproductsComponent implements OnInit {
 
   constructor(private route:Router,public service:ServicesService) { }
-
-  
 
   ngOnInit(): void {
   }
 
+  gotoBack(){
+    this.route.navigate(["vendedor"]);
+  }
   gotoNewpublication(){
     this.route.navigate(["newproduct"]);
-  }
-  gotoMypublications(){
-    this.route.navigate(["myproducts"]);
   }
 
 }

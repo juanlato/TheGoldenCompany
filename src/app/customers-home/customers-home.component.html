@@ -2,10 +2,12 @@
 <div class="generalBox">
     <div class="containerBox">
         <div class="userInfo">
-           <div class="nameClient"><b>(Nombre del cliente)</b> </div> 
+           <div class="nameClient"><b>{{this.userInfo.name+this.userInfo.lastname}}</b> </div> 
            <div class="imageClient"><img class="userImage" src="./../../assets/img/vendedor.png" alt=""></div>
            <div class="personalData">
-               
+               <div class="personalInfo"><b>Cumpleaños:</b>{{this.userInfo.birthday}}</div>
+               <div class="personalInfo"><b>Email:</b><p>{{this.userInfo.email}}</p></div>
+               <div class="personalInfo"><b># Documento:</b><p>{{this.userInfo.document_id}}</p></div>
            </div>
         </div>
         <div>
@@ -65,13 +67,13 @@
                     <div class="resposiveMin">Estado</div>
                  </div>
                  <div class="tableItemsW">
-                    <div><b class="resposiveMinTitle">Orden:</b> 102</div>
+                    <div><b class="resposiveMinTitle"># Orden:</b> 102</div>
                     <div><b class="resposiveMinTitle">Descripción:</b>Aguacates 20 kg , Arroz 2000kg , leche 120 lt</div>
                     <div><b class="resposiveMinTitle">Precio:</b>500000</div>
                     <div><b class="resposiveMinTitle">Estado:</b>En camino</div>
                  </div> 
                  <div class="tableItemsG">
-                    <div><b class="resposiveMinTitle">Orden:</b> 108</div>
+                    <div><b class="resposiveMinTitle"># Orden:</b> 108</div>
                     <div><b class="resposiveMinTitle">Descripción:</b>Aguacates 10 kg , Arroz 5000kg , leche 20 lt</div>
                     <div><b class="resposiveMinTitle">Precio:</b>400000</div>
                     <div><b class="resposiveMinTitle">Estado:</b>Entregado</div>
