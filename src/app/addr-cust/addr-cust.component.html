@@ -1,0 +1,126 @@
+<app-header></app-header>
+<div class="generalBox">
+    <div class="containerBox">
+
+        <div class="Address">
+
+            <div class="Palet">
+
+                <div class="Info">        
+                    <mat-form-field>
+                        <mat-label>Tipo de calle:</mat-label>
+                        <input matInput [formControl]="this.type" [errorStateMatcher]="matcher"
+                            placeholder="ej: Cra. / Cll.">
+                        <mat-error *ngIf="type.hasError('text') && !type.hasError('required')">
+                            Please enter a valid street type
+                        </mat-error>
+                        <mat-error *ngIf="type.hasError('required')">
+                            Street type is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Número primario:</mat-label>
+                        <input matInput [formControl]="this.num1" [errorStateMatcher]="matcher"
+                            placeholder="ej: 91 C">
+                        <mat-error *ngIf="num1.hasError('text') && !num1.hasError('required')">
+                            Please enter a valid number
+                        </mat-error>
+                        <mat-error *ngIf="num1.hasError('required')">
+                            Street number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Número adjunto:</mat-label>
+                        <input matInput [formControl]="this.num2" [errorStateMatcher]="matcher"
+                            placeholder="ej: 31 A - 15">
+                        <mat-error *ngIf="num2.hasError('text') && !num2.hasError('required')">
+                            Please enter a valid number
+                        </mat-error>
+                        <mat-error *ngIf="num2.hasError('required')">
+                            Street number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Tipo de inmueble:</mat-label>
+                        <input matInput [formControl]="this.house" [errorStateMatcher]="matcher"
+                            placeholder="ej: Edificio, Conjunto, Casa">
+                        <mat-error *ngIf="house.hasError('text') && !house.hasError('required')">
+                            Please enter a valid property type
+                        </mat-error>
+                        <mat-error *ngIf="house.hasError('required')">
+                            Property type is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Detalles adicionales:</mat-label>
+                        <input matInput [formControl]="this.advice" [errorStateMatcher]="matcher"
+                            placeholder="ej: Piso, Número de apto, descripción de la residencia">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="Confirm">
+                <b>Confirmar mi dirección</b>
+            </div>
+        </div>
+
+        <div class="Selling">
+
+            <div class="Circles">
+                <div class="Cir1" (click)="this.gotoCart()"> </div>
+                <div class="Cir2"> </div>
+                <div class="Cir3"> </div>
+                <div class="Cir4"> </div>
+            </div>
+
+            <div class="Map">
+
+            </div>
+
+            <div class="SumUp">
+                <div class="Pap">
+                    <div class="total">
+                        <div class="myOrders">
+                            <div class="titleMyOrders">
+                                <b>Mi envío</b>
+                            </div>
+                            <div class="tableOrders">
+                                <div class="tableTitles2">
+                                    <div>Categoría</div>
+                                    <div class="resposiveMin">Valor</div>
+                                </div>
+                                <div class="tableItemsW2">
+                                    <div><b class="resposiveMinTitle">Categoría:</b> Total del pedido</div>
+                                    <div><b class="resposiveMinTitle">Valor:</b>$ 107.100</div>
+                                </div>
+                                <div class="tableItemsG2">
+                                    <div><b class="resposiveMinTitle">Categoría:</b> Valor del envío</div>
+                                    <div><b class="resposiveMinTitle">Valor:</b>$ 15.000</div>
+                                </div>
+                                <div class="tableItemsW2">
+                                    <div><b class="resposiveMinTitle">Categoría:</b> Total</div>
+                                    <div><b class="resposiveMinTitle">Valor:</b>$ 122.100</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code">
+                        <input placeholder="Ingresa aquí tu código promocional" class="inputlog" type="text">
+                    </div>
+                </div>
+
+                <div class="But">
+                    <div class="Button" (click)="this.gotoFindMore()"><b>Oops, he olvidado agregar algo</b></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<app-footer></app-footer>
