@@ -52,6 +52,10 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 
+import { GoogleMapsModule } from "@angular/google-maps";
+
+
+
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistroComponent } from './registro/registro.component';
@@ -153,6 +157,7 @@ const routes: Routes = [
     MatTooltipModule,
     MatTreeModule,
     ReactiveFormsModule,
+    GoogleMapsModule,
     RouterModule.forRoot(routes),    
     ],
   exports: [
