@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productdetailpurchase.component.sass']
 })
 export class ProductdetailpurchaseComponent implements OnInit {
-
+  public prSearch
   constructor() { }
 
   ngOnInit(): void {
