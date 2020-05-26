@@ -9,6 +9,10 @@ import { ServicesService } from "src/app/services.service";
 })
 export class NewproductComponent implements OnInit {
 
+  public prName
+  public prDescription
+  public prValue
+  public prAddress
   constructor(private route:Router,public service:ServicesService) { }
 
   ngOnInit(): void {
