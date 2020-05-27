@@ -4,10 +4,12 @@
         <div class="Info_Map">
             <div class="Info">
                 <div class="Dir">
-                     <input  placeholder="Dirección: Ibagué Ruta 43 Km 21 Vía Honda - Tolima" class="inputlog" type="text">
+                     <input [(ngModel)]="this.direcction" placeholder="Dirección: Ibagué Ruta 43 Km 21 Vía Honda - Tolima" class="inputlog" type="text">
                  </div>
                  <div class="Dir">
-                    <input  placeholder="Distancia Máxima" class="inputlog" type="text">
+                    <div class="buttonlogin" (click)="this.findDir()">
+                        <b>Buscar</b>
+                    </div>
                 </div>
             </div>
             <div class="map">
