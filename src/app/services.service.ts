@@ -8,6 +8,10 @@ interface login {
   hasError: boolean,
   errorDesc: string
 }
+interface geoCode {
+  results: any[],
+  status: string,
+}
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +37,6 @@ export class ServicesService {
     return this.http.post<login>(this.urlService + '/SampleData/registro', form);
   }
   geoCode(dir){
-    return this.http.get<login>("https://maps.googleapis.com/maps/api/geocode/json?address="+dir+"&key=AIzaSyA_VYyQbgpY2wLb7B_5Wh4rrrM9d3TWupg");
+    return this.http.get<geoCode>("https://maps.googleapis.com/maps/api/geocode/json?address="+dir+"&key=AIzaSyA_VYyQbgpY2wLb7B_5Wh4rrrM9d3TWupg");
   }
 }
