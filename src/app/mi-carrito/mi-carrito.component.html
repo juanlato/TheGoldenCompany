@@ -4,7 +4,7 @@
 
         <div class="Buyer">
 
-            <div class="Mas">
+            <div class="Mas" (click)="this.gotoFindMore()">
               <b>Ver más opciones</b>  
             </div>
 
@@ -23,16 +23,75 @@
 
         <div class="Selling">
             <div class="Circles">
-                <div class="Cir"> </div>
-                <div class="Cir"> </div>
-                <div class="Cir"> </div>
-                <div class="Cir"> </div>             
+                <div class="Cir1"> </div>
+                <div class="Cir2"> </div>
+                <div class="Cir3"> </div>
+                <div class="Cir4"> </div>             
             </div>
 
+            <div class="myOrders">
+                <div class="titleMyOrders">
+                    <b>Mis productos</b> 
+                 </div>
+                 <div class="tableOrders">
+                    <div class="tableTitles1">
+                        <div >Producto</div>
+                        <div class="resposiveMin">Cantidad</div>
+                        <div class="resposiveMin">Precio</div>
+                     </div>
+                     <div class="tableItemsW1">
+                        <div><b class="resposiveMinTitle">Producto:</b> Aguacates</div>
+                        <div><b class="resposiveMinTitle">Cantidad:</b> 20 kg </div>
+                        <div><b class="resposiveMinTitle">Precio:</b>$ 50.000</div>
+                     </div> 
+                     <div class="tableItemsG1">
+                        <div><b class="resposiveMinTitle">Producto:</b> Arroz</div>
+                        <div><b class="resposiveMinTitle">Cantidad:</b>50 kg</div>
+                        <div><b class="resposiveMinTitle">Precio:</b>$ 40.000</div>
+                     </div> 
+                 </div>                           
+            </div> 
 
+            <div class="SumUp">
+                <div class="Pap">
+                    <div class="total">
+                        <div class="myOrders">
+                            <div class="titleMyOrders">
+                                <b>Mi factura</b> 
+                             </div>
+                             <div class="tableOrders">
+                                <div class="tableTitles2">
+                                    <div >Categoría</div>
+                                    <div class="resposiveMin">Valor</div>
+                                 </div>
+                                 <div class="tableItemsW2">
+                                    <div><b class="resposiveMinTitle">Categoría:</b> Subtotal</div>
+                                    <div><b class="resposiveMinTitle">Valor:</b>$ 90.000</div>
+                                 </div> 
+                                 <div class="tableItemsG2">
+                                    <div><b class="resposiveMinTitle">Categoría:</b> IVA 19%</div>
+                                    <div><b class="resposiveMinTitle">Valor:</b>$ 17.100</div>
+                                 </div> 
+                                 <div class="tableItemsW2">
+                                    <div><b class="resposiveMinTitle">Categoría:</b> Total</div>
+                                    <div><b class="resposiveMinTitle">Valor:</b>$ 107.100</div>
+                                 </div> 
+                             </div>                           
+                        </div>               
+
+                    </div>
+                    <div class="code">
+                            <input  placeholder="Ingresa aquí tu código promocional" class="inputlog" type="text">
+                    </div>
+                </div>
+
+                <div class="But">
+                    <div class="Button" (click)="this.gotoFindMore()"><b>Quiero seguir comprando !</b></div>
+                    <div class="Button" (click)="this.gotoAddr()"><b>He terminado de escoger mi pedido</b></div>
+                </div>
+            </div>
 
         </div>
-
 
     </div>
 </div>
